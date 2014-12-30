@@ -1,9 +1,11 @@
+# Ruby best practice is x = 100 not x=100
 cars = 100
 space_in_a_car = 4.0
 drivers = 30
 passengers = 90
 cars_not_driven = cars - drivers
 cars_driven = drivers
+# seems like space_in_a_car should be 3.0 since driver will be 1 of 4.0
 carpool_capacity = cars_driven * space_in_a_car
 average_passenger_per_car = passengers / cars_driven
 
