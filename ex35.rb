@@ -4,15 +4,16 @@ def gold_room
   print "> "
   choice = $stdin.gets.chomp
   
-  # this line has a bug, so fix it
-  if choice.include? ("0") || choice.include? ("1")
+  # verify the choice is a number
+  # http://stackoverflow.com/questions/1235863/test-if-a-string-is-basically-an-integer-in-quotes-using-ruby
+  if choice.to_i.to_s == choice
     how_much = choice.to_i
   else
-    dead("Man, learn tyo type a number.")
-  end_number
+    dead("Man, learn to type a number.")
+  end
   
   if how_much < 50
-    put "Nice, you're not greedy, you win!"
+    puts "Nice, you're not greedy, you win!"
     exit(0)
   else
     dead("You greedy punk!")
