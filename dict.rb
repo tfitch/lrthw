@@ -74,4 +74,11 @@ module Dict
       end
     end
   end
+  
+  def Dict.dump(aDict)
+    # dumps out everything 
+    aDict.each do |bucket|
+      puts bucket
+    end
+  end
 end
